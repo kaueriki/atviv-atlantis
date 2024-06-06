@@ -1,0 +1,141 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: block; /* Permite o scroll */
+  background-image: url("../../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 70%;
+  max-width: 600px;
+  margin: 2rem auto; /* Centraliza o container verticalmente */
+  border: 3px solid #fff;
+}
+.containercadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 70%;
+  max-width: 600px;
+  margin: 2rem auto; /* Centraliza o container verticalmente */
+  border: 3px solid #fff;
+}
+
+h1 {
+  color: #010831;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.botaovoltar {
+  width: 20%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #f81f1f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botaovoltar:hover {
+  background-color: #9c0202;
+  transform: scale(1.05);
+}
+
+
+.BoxTabela table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.BoxTabela th, .BoxTabela td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.BoxTabela th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.BoxTabela tbody tr:hover {
+  background-color: #ddd;
+}
+.BoxTabela .botaodeletar {
+  background-color: rgba(255, 43, 43, 0.911);
+  width: 45%;
+  font-size: 15px;
+}
+
+.BoxTabela .botaoeditar {
+  background-color: #007bff;
+  width: 45%;
+  margin: 6px;
+  font-size: 15px;
+}
+
+.botaoregistrar {
+  background-color: #007bff;
+  width: 25%;
+  margin: 6px;
+  font-size: 15px;
+}
+
+.inputregistrar {
+  width: 50%;
+}

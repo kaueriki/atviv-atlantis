@@ -1,0 +1,469 @@
+body {
+  font-family: 'JetBrains Mono';font-size: 22px;
+}
+.container {
+  background: #f3f3f3;
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+--cor-navbar: #D9D9D9;
+--pagina-1: #4449C2;
+--pagina-2: purple;
+--pagina-3: #FF6C2D;
+--pagina-4: #BE0000;
+--pagina-5: #F5B960;
+--pagina-6: #039D00;
+--pagina-7: #000000;
+--pagina-8: purple;
+}
+
+nav a {
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    max-width: 6%;
+    position: fixed;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--cor-navbar);
+}
+
+
+.icon{
+  max-width: 100%;
+  max-height: 100%;
+}
+section {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    transition: all ease-in .5s;
+    display: flex;
+} 
+
+section h1 {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+/* Styles applied on trigger */
+section:target {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+section:target h1 {
+    opacity: 0;
+    animation: 2s fadeIn forwards .5s;
+}
+#Pesquisa {
+    border: var(--pagina-1);
+    border-width: 10px;
+    border-style: solid;
+}
+#Relatorio {
+  border: var(--pagina-2);
+  border-width: 10px;
+  border-style: solid;
+}
+
+#Tabela {
+  border: var(--pagina-3);
+  border-width: 10px;
+  border-style: solid;
+}
+
+#Adicionar {
+    border: var(--pagina-4);
+    border-width: 10px;
+    border-style: solid;
+}
+
+#Editar {
+  border: var(--pagina-5);
+    border-width: 10px;
+    border-style: solid;
+    flex-direction:column;
+}
+
+#Notificacao {
+  border: var(--pagina-6);
+    border-width: 10px;
+    border-style: solid;
+}
+
+#Home {
+  border: var(--pagina-7);
+    border-width: 10px;
+    border-style: solid;
+}
+
+#Perfil {
+  border: var(--pagina-8);
+    border-width: 10px;
+    border-style: solid;
+}
+
+@keyframes fadeIn {
+    100% { opacity:1 }
+}
+
+.Pesquisa {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.Pesquisa::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 5px;
+  background-color: #4449C2; 
+  transform: scaleX(0.65);
+  transition: transform 0.3s ease;
+}
+.Pesquisa:hover::after {
+  transform: scaleX(1.05);
+}
+.Relatorio {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.Relatorio::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 5px;
+  background-color: purple; 
+  transform: scaleX(0.65); 
+  transition: transform 0.3s ease; 
+}
+.Relatorio:hover::after {
+  transform: scaleX(1.05); 
+}
+.Tabela {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.Tabela::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 5px;
+  background-color: #FF6C2D; 
+  transform: scaleX(0.65); 
+  transition: transform 0.3s ease; 
+}
+.Tabela:hover::after {
+  transform: scaleX(1.05); 
+}
+.Adicionar {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.Adicionar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 5px;
+  background-color: #BE0000; 
+  transform: scaleX(0.65); 
+  transition: transform 0.3s ease; 
+}
+.Adicionar:hover::after {
+  transform: scaleX(1.05); 
+}
+.Editar {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.Editar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 5px;
+  background-color: #F5B960; 
+  transform: scaleX(0.65); 
+  transition: transform 0.3s ease; 
+}
+.Editar:hover::after {
+  transform: scaleX(1.05); 
+}
+.Notificacao {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.Notificacao::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 5px;
+  background-color: #039D00; 
+  transform: scaleX(0.65); 
+  transition: transform 0.3s ease; 
+}
+.Notificacao:hover::after {
+  transform: scaleX(1.05); 
+}
+.Home {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.Home::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 5px;
+  background-color: #000000; 
+  transform: scaleX(0.65); 
+  transition: transform 0.3s ease; 
+}
+.Home:hover::after {
+  transform: scaleX(1.05); 
+}
+.Perfil {
+  width: 6%;
+  position: fixed;
+  cursor: pointer;
+  right: 2.5%;
+  top: 4%;
+  z-index: 100;
+  --g: 2.5px;     /* the gap */
+  --b: 7px;    /* border thickness*/
+  --c: #000000; /* the color */
+  
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: .3s;
+  
+}
+.Perfil:hover{
+  --_p: 75%;
+}
+
+.body{
+  font-family: "JetBrains Mono", monospace;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.containerLogin{
+  background-color: rgba(120, 142, 255, 0.3);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 900px;
+  height: 500px;
+  /* padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+  padding-bottom: 7%; */
+  border-radius: 60px;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+}
+.containerLogin .retangulocadastro {
+  width: 30%;
+  background-image: linear-gradient(45deg, rgba(153, 153, 153, 0.397), rgba(255, 255, 255, 0.9));
+  padding:0 30px;
+  border-radius: 60px 0 0 60px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.containerLogin .retanguloLogin {
+  width: 70%;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+  input {
+  padding: 12px;
+  border-radius: 30px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.35);
+  color: #313056;
+  width: 250px;
+}   
+button {
+  padding: 12px;
+  background-color: #313056;
+  border-radius: 30px;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  width: 50%;
+}
+.containerLogin .retanguloLogin button {
+  width: 100px;
+}
+button:hover{
+  background-color:rgb(196, 191, 191);
+  color: #313056;
+}
+h1 {
+  color: #313056;
+  font-size:35px;
+}
+
+@media (max-width:981px) {
+  .containerLogin{
+  flex-direction: column-reverse;
+  gap: 20px;
+  width: 350px;
+}
+.containerLogin .retangulocadastro {
+  width: 100%;
+  align-items: center;
+  border-radius: 60px;
+  padding: 0;
+}
+.containerLogin .retanguloLogin {
+  align-items: center;
+  width: 100%;
+  border-radius: 0 60px;
+  }
+  .containerLogin .retangulocadastro button {
+  width: 100px;
+}
+.containerLogin .retanguloLogin button {
+  width: 100px;
+}
+ input {
+  width: 150px;
+}   
+}
+
+.addcss{
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: 0;
+  gap: 7% 3%;
+  display: inline-flex;
+  max-height: 15%;
+  background-color: #D9D9D9;
+  justify-content: space-around;
+  min-width: 96%;
+  padding-right: 8%;
+}
+
+.botaoadd1{
+  border-radius: 40px;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 2%;
+  margin-top: 2.3%;
+  max-height: 30%;
+  background-color: #f3f3f3;
+  border-style: solid;
+  border-color: #BE0000;
+}
+
+.botaoadd1:hover{
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #FF8F8F;
+}
+
+.editcss{
+  margin-top: 0.5%;
+  margin-left: auto;
+  margin-right: 0;
+  gap: 7% 3%;
+  display: inline-flex;
+  height: 12.5%;
+  background-color: #D9D9D9;
+  justify-content: space-around;
+  min-width: 96%;
+}
+
+.edit2css{
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: 0;
+  gap: 7% 3%;
+  display: inline-flex;
+  max-height: 12.5%;
+  background-color: #D9D9D9;
+  justify-content: space-around;
+  min-width: 96%;
+  padding-right: 8%;
+}
+
+.botaoedit1{
+  border-radius: 40px;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  margin-top: 2.3%;
+  max-height: 30%;
+  background-color: #f3f3f3;
+  border: 2px solid #F5B960
+}
+
+.botaoedit1:hover{
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #FFD89D;
+}
